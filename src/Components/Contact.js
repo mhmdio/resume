@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "../styles/RetroHeader.css";
+
 
 const Contact = ({ data }) => {
   const [name, setName] = useState("");
@@ -28,11 +30,11 @@ const Contact = ({ data }) => {
   };
 
   return (
-    <section id="contact">
+    <section id="contact" className="contact-section">
       <div className="row section-head">
         <div className="two columns header-col">
           <h1>
-            <span>Get In Touch.</span>
+            <span>[ SEND MESSAGE ]</span>
           </h1>
         </div>
 
@@ -43,11 +45,11 @@ const Contact = ({ data }) => {
 
       <div className="row">
         <div className="eight columns">
-          <form onSubmit={submitForm}>
+          <form onSubmit={submitForm} className="contact-form">
             <fieldset>
               <div>
                 <label htmlFor="contactName">
-                  Name <span className="required">*</span>
+                  PLAYER NAME <span className="required">*</span>
                 </label>
                 <input
                   type="text"
@@ -62,7 +64,7 @@ const Contact = ({ data }) => {
 
               <div>
                 <label htmlFor="contactEmail">
-                  Email <span className="required">*</span>
+                  COMM-LINK <span className="required">*</span>
                 </label>
                 <input
                   type="text"
@@ -76,7 +78,7 @@ const Contact = ({ data }) => {
               </div>
 
               <div>
-                <label htmlFor="contactSubject">Subject</label>
+                <label htmlFor="contactSubject">QUEST TITLE</label>
                 <input
                   type="text"
                   defaultValue=""
@@ -90,7 +92,7 @@ const Contact = ({ data }) => {
 
               <div>
                 <label htmlFor="contactMessage">
-                  Message <span className="required">*</span>
+                  MESSAGE CONTENT <span className="required">*</span>
                 </label>
                 <textarea
                   cols="50"
@@ -103,38 +105,38 @@ const Contact = ({ data }) => {
               </div>
 
               <div>
-                <button onClick={submitForm} type="submit" className="submit">
-                  Submit
+                <button onClick={submitForm} type="submit" className="submit-btn">
+                  [ SEND MESSAGE ]
                 </button>
               </div>
             </fieldset>
           </form>
 
-          <div id="message-warning"> Error boy</div>
+          <div id="message-warning">[ ERROR: MESSAGE NOT SENT ]</div>
           <div id="message-success">
-            <i className="fa fa-check"></i>Your message was sent, thank you!
-            <br />
+            [ MESSAGE SENT SUCCESSFULLY! ]
           </div>
         </div>
 
         <aside className="four columns footer-widgets">
           <div className="widget widget_contact">
-            <h4>Address and Phone</h4>
+            <h4>[ CONTACT INFO ]</h4>
             <p className="address">
-              {contactName}
+              PLAYER: {contactName}
               <br />
-              {contactEmail}
+              COMM-LINK: {contactEmail}
               <br />
               <br />
-              {street} <br />
-              {city}, {state} {zip}
+              BASE: {street}
               <br />
-              <span>{phone}</span>
+              LOCATION: {city}, {state} {zip}
+              <br />
+              DIRECT-LINE: {phone}
             </p>
           </div>
         </aside>
       </div>
-    </section>
+    </section >
   );
 };
 

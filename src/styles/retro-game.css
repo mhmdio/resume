@@ -1,0 +1,26 @@
+:root {
+  --pixel-bg: #000000;
+  --pixel-text: #33ff33;
+  --pixel-border: #33ff33;
+}
+
+body {
+  background-color: var(--pixel-bg);
+  color: var(--pixel-text);
+  font-family: 'Press Start 2P', cursive;
+}
+
+.portfolio-item {
+  border: 2px solid var(--pixel-border);
+  image-rendering: pixelated;
+}
+
+.portfolio-item:hover {
+  animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(2px, 2px); }
+  50% { transform: translate(-2px, -2px); }
+  100% { transform: translate(2px, 2px); }
+}

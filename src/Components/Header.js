@@ -1,5 +1,6 @@
 import React from "react";
 import TypeWriter from "typewriter-effect";
+import "../styles/RetroHeader.css";
 
 const Header = ({ data }) => {
   if (data) {
@@ -19,44 +20,44 @@ const Header = ({ data }) => {
   }
 
   return (
-    <header id="home">
-      <nav id="nav-wrap">
+    <header id="home" className="retro-header">
+      <nav id="nav-wrap" className="retro-nav">
         <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-          Show navigation
+          [MENU]
         </a>
         <a className="mobile-btn" href="#home" title="Hide navigation">
-          Hide navigation
+          [CLOSE]
         </a>
 
         <ul id="nav" className="nav">
           <li className="current">
             <a className="smoothscroll" href="#home">
-              Home
+              [HOME]
             </a>
           </li>
           <li>
             <a className="smoothscroll" href="#about">
-              About
+              [ABOUT]
             </a>
           </li>
           <li>
             <a className="smoothscroll" href="#resume">
-              Resume
+              [STATS]
             </a>
           </li>
           <li>
             <a className="smoothscroll" href="#portfolio">
-              Works
+              [QUESTS]
             </a>
           </li>
           <li>
             <a className="smoothscroll" href="#testimonials">
-              Testimonials
+              [ALLIES]
             </a>
           </li>
           <li>
             <a className="smoothscroll" href="#contact">
-              Contact
+              [MESSAGE]
             </a>
           </li>
         </ul>
@@ -65,10 +66,19 @@ const Header = ({ data }) => {
       <div className="row banner">
         <div className="banner-text">
           <h1 className="responsive-headline">
-            <TypeWriter typing={0.5}>{name ? `I'm ${name}.` : null}</TypeWriter>
+            <TypeWriter
+              options={{
+                strings: [`PLAYER: ${name}`, 'PRESS START'],
+                autoStart: true,
+                loop: true,
+                cursor: '█'
+              }}
+            />
           </h1>
           <h3>
-            Based in {city}. <span>{occupation}</span>. {description}.
+            <span className="location">LOCATION: {city}</span><br/>
+            <span className="class">CLASS: {occupation}</span><br/>
+            <span className="mission">{description}</span>
           </h3>
           <hr />
           <ul className="social">{networks}</ul>
@@ -77,7 +87,7 @@ const Header = ({ data }) => {
 
       <p className="scrolldown">
         <a className="smoothscroll" href="#about">
-          <i className="icon-down-circle"></i>
+          [PRESS DOWN TO START]
         </a>
       </p>
     </header>

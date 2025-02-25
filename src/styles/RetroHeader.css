@@ -1,0 +1,48 @@
+.retro-header {
+    background: #000;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+  }
+  
+  .retro-nav {
+    border-bottom: 2px solid #33ff33;
+    background: #000;
+  }
+  
+  .retro-nav ul li a {
+    color: #33ff33;
+    text-shadow: 2px 2px #003300;
+  }
+  
+  .retro-nav ul li a:hover {
+    animation: glitch 0.3s infinite;
+  }
+  
+  .banner-text h1 {
+    color: #33ff33;
+    text-shadow: 4px 4px #003300;
+  }
+  
+  .banner-text h3 {
+    color: #00cc00;
+    font-size: 16px;
+  }
+  
+  .social li a {
+    color: #33ff33;
+    border: 2px solid #33ff33;
+    padding: 10px;
+  }
+  
+  .social li a:hover {
+    background: #33ff33;
+    color: #000;
+  }
+  
+  @keyframes glitch {
+    0% { transform: translate(2px, 2px); }
+    25% { transform: translate(-2px, -2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, 2px); }
+    100% { transform: translate(2px, 2px); }
+  }
