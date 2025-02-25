@@ -1,57 +1,67 @@
-# PAPA React JS Resume Starter Pack and Digital Portfolio
+# React Portfolio Resume
 
-![PAPA React JS Portfolio Starter Pack](resume-screenshot.jpg?raw=true "PAPA React JS Portfolio Stater Pack ")
+A customizable React-based portfolio resume template that pulls data from a JSON file for easy updates and maintenance.
 
-### <a href="https://669e9d080c86fb1064954aae--soft-begonia-4eba06.netlify.app/">LIVE DEMO</a>
+## Features
 
-## Resume Starter Pack Description
+- React-based portfolio website
+- Data-driven content using JSON
+- Responsive design
+- Easy customization
+- One-click deployment
 
-This portfolio starter pack is made using React. The data on the portfolio is directly linked to a JSON file. Any changes to the portfolio can be made in the JSON file. The changes will then be reflected on to the portfolio. This allows you to customize your own personal portfolio that can be used for applying to jobs or other personal uses.
+## Getting Started
 
-## 1. Make sure you have NODE installed!
+### Prerequisites
 
-Firstly, you will need to download the latest version of Node by <a href="https://nodejs.org/en/download/">CLICKING HERE</a>
+- Node.js - [Download & Install](https://nodejs.org/en/download/)
 
-## 2. Clone the repo!
+### Installation
 
-Next, you will need to run the following command in the Terminal to clone the repo onto your machine.
+1. Install dependencies:
 
-`git clone https://github.com/sonnysangha/Resume-Portfolio-Starter-pack.git`
+```bash
+npm install
+```
 
-## 3. Install Dependancies
+1. Start the development server:
 
-Next, you need to install all the dependancies using:
+```bash
+npm start
+```
 
-`npm install`
+## Customization
 
-Once this is done, you can start the app with:
+### Content
 
-`npm start`
+1. Open `public/resumeData.json`
+2. Replace the existing data with your information
+3. Add portfolio images to `public/images/portfolio/`
 
-## 4. Fill in your personal info
+### Images
 
-To populate the website with all of your own data, open the public/resumeData.json file and simply replace the data in there with your own. Images for the porfolio section are to be put in the public/images/portfolio folder.
+Replace the following files with your own images (keep the same filenames):
 
-## 5. (OPTIONAL) Replacing images and/or fonts
+- `public/images/header-background.jpg`
+- `public/images/testimonials-bg.jpg`
+- `public/favicon.ico`
 
-If you want to display your own pictures then you have to replace the files at these locations: public/images/header-background.jpg, public/images/testimonials-bg.jpg and public/favicon.ico. FILE NAMES MUST NOT BE CHANGED else the code referencing these images will no longer work.
+## Deployment
 
-## 7. Finalising Resume
+1. Build the project:
 
-Once all the formatting and data input is finalised, run `npm run build`. This will create a dedicated build folder.
+```bash
+npm run build
+```
 
-## 8. Host Resume Online
+1. Deploy to Netlify:
 
-1. Open the build folder in the finder screen
-2. Go to <a href="https://www.netlify.com/">Netlify</a> and set up a profile
-3. Go to the 'Sites Tab'
-4. Simply Drag and drop the 'Build' Folder into the designated upload space
-5. The app will begin deploying & the deployment URL will be presented!
-
-🚀 BOOM, you are now LIVE!!!
+- Go to [Netlify](https://www.netlify.com/)
+- Create an account or sign in
+- Navigate to the 'Sites' tab
+- Drag and drop the `build` folder to deploy
+- Your site will be live at the provided Netlify URL! 🚀
 
 ## Credits
 
-##### Original Idea
-
-<a href="https://github.com/tbakerx/react-resume-template/blob/master/README.md">Inspiration from Tim Baker (tbakerx)</a>
+Inspired by [Tim Baker's React Resume Template](https://github.com/tbakerx/react-resume-template)
